@@ -54,8 +54,8 @@ p {
 
 .quote-container {
     background-color: var(--dark-color);
-    height: 50vh;
     min-height: fit-content;
+
 }
 
 .start-button-container {
@@ -125,53 +125,18 @@ button:disabled:after {
     font-family: 'Cormorant Upright', serif;
 }
 
-@media (min-width: 425px) {
-    body {
-        background-size: auto 100vh;
-    }
-}
-@media (min-width: 768px) {
-    
-    body {
-        padding: 40px;
-    }
-
-    .wrapper {
-        padding: 30px 60px;
-    }
-
-    button {
-        font-size: 28px;
-    }
-
-    .actual-quote-container p,
-    .guess-counter {
-        font-size: 32px;
-    }
-}
-@media (min-width: 1024px) {
-    body {
-        padding: 80px 200px;
-        background-image: url("./assets/background-desktop.jpg");
-        background-size: cover;
-    }
-
-    button {
-        font-size: 32px;
-    }
-
-    .actual-quote-container p
-    .guess-counter {
-        font-size: 40px;
-    }
-}
-
 /********** BORDERS **********/
 
 .inner-border {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    position: relative;
+    border: 2px solid var(--skintone-color);
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 48px;
 }
 
 .outer-border {
@@ -188,15 +153,6 @@ button:disabled:after {
     width: 100%;
     padding: 6px;
     box-sizing: border-box;
-}
-
-.inner-border {
-    position: relative;
-    border: 2px solid var(--skintone-color);
-    height: 100%;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 48px;
 }
 
 /********** DECORATIONS **********/
@@ -230,4 +186,55 @@ button:disabled:after {
     bottom: 0;
     -webkit-transform: scaleY(-1);
     transform: scaleY(-1);
+}
+
+/********** MEDIA QUERIES **********/
+
+@media (min-width: 425px) {
+    body {
+        background-size: auto 100vh;
+    }
+}
+@media (min-width: 768px) {
+    body {
+        padding: 40px;
+        background-size: cover;
+    }
+
+    .wrapper {
+        padding: 30px 60px;
+    }
+
+    .inner-border {
+        padding: 80px 48px;
+    }
+
+    button {
+        font-size: 28px;
+    }
+
+    .actual-quote-container p,
+    .guess-counter {
+        font-size: 32px;
+    }
+}
+@media (min-width: 1024px) {
+    body {
+        padding: 80px 200px;
+        background-image: url("./assets/background-desktop.jpg");
+        background-size: cover;
+    }
+
+    .inner-border {
+        padding: 120px 48px;
+    }
+
+    button {
+        font-size: 32px;
+    }
+
+    .actual-quote-container p
+    .guess-counter {
+        font-size: 40px;
+    }
 }
