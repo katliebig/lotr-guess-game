@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: url("./assets/bg3.jpg");
+    background-image: url("./assets/background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position-x: 75%;
@@ -17,7 +17,7 @@ p {
 }
 
 .wrapper {
-    padding: 10px;
+    padding: 20px 10px;
     background-color: rgba(250, 235, 215, 0.3);
     box-shadow: 0 0 10px rgba(250, 235, 215, 0.3);
 }
@@ -130,6 +130,11 @@ button:disabled:after {
     }
 }
 @media (min-width: 768px) {
+    
+    body {
+        padding: 40px;
+    }
+
     .wrapper {
         padding: 30px 60px;
     }
@@ -146,6 +151,7 @@ button:disabled:after {
 @media (min-width: 1024px) {
     body {
         padding: 80px 200px;
+        background-image: url("./assets/background-desktop.jpg");
         background-size: cover;
     }
 
