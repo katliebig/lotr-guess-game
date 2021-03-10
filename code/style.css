@@ -1,0 +1,223 @@
+:root {
+    --light-color: #fda;
+    --skintone-color: #de9b72;
+    --dark-color: #3a3d3e;
+}
+
+body {
+    background-image: url("./assets/bg3.jpg");
+    /* background-size: auto 100vh; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: 75%;
+    font-family: 'Cormorant Unicase', serif;
+    margin: 0;
+}
+p {
+    margin: 0;
+}
+
+.wrapper {
+    padding: 10px;
+    background-color: rgba(250, 235, 215, 0.3);
+    box-shadow: 0 0 10px rgba(250, 235, 215, 0.3);
+}
+
+.restart-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.restart-container > * {
+    width: 50%;
+    height: 60px;
+    box-sizing: border-box;
+}
+
+.guess-counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--light-color);
+    color: var(--light-color);
+    background-color: var(--dark-color);
+    font-family: 'Cormorant Unicase', serif;
+    font-size: 24px;
+    margin-left: 8px;
+}
+
+.setup-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.quote-container {
+    background-color: var(--dark-color);
+    height: 50vh;
+}
+
+.start-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.guess-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+button {
+    position: relative;
+    padding: 8px 16px;
+    border: 2px solid var(--light-color);
+    color: var(--light-color);
+    background-color: var(--dark-color);
+    font-family: 'Cormorant Unicase', serif;
+    font-size: 24px;
+    margin: 8px;
+}
+
+button:after {
+    content: " ";
+    border: 2px solid rgba(0,0,0,0);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transition: all 0.4s;
+}
+
+button:hover:after {  
+    border: 2px solid var(--light-color);
+    width: calc(100% - 10px);
+    height: calc(100% + 10px); 
+}
+
+button:disabled {
+    filter: grayscale(100%);
+}
+
+button:disabled:after {
+    border: none;
+}
+
+.actual-quote-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.actual-quote-container p {
+    font-size: 24px;
+    padding: 10px;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--light-color);
+    text-align: center;
+    font-family: 'Cormorant Upright', serif;
+}
+
+@media (min-width: 768px) {
+    
+    .wrapper {
+        padding: 30px 60px;
+    }
+
+    button {
+        font-size: 28px;
+    }
+
+    .actual-quote-container p,
+    .guess-counter {
+        font-size: 32px;
+    }
+}
+@media (min-width: 1024px) {
+
+    body {
+        background-size: cover;
+        padding: 80px 200px;
+    }
+
+    button {
+        font-size: 32px;
+    }
+
+    .actual-quote-container p
+    .guess-counter {
+        font-size: 40px;
+    }
+}
+
+/********** BORDERS **********/
+
+.inner-border {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.outer-border {
+    border: 2px solid var(--skintone-color);
+    height: 100%;
+    width: 100%;
+    padding: 6px;
+    box-sizing: border-box;
+}
+
+.mid-border {
+    border: 6px solid var(--light-color);
+    height: 100%;
+    width: 100%;
+    padding: 6px;
+    box-sizing: border-box;
+}
+
+.inner-border {
+    position: relative;
+    border: 2px solid var(--skintone-color);
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/********** DECORATIONS **********/
+
+.corner-decoration {
+    position: absolute;
+    width: 3em;
+}
+
+.corner-decoration.corner-left-top {
+    left: 0;
+    top: 0;
+}
+
+.corner-decoration.corner-right-top {
+    top: 0;
+    right: 0;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.corner-decoration.corner-right-bottom {
+    right: 0;
+    bottom: 0;
+    -webkit-transform: scale(-1);
+    transform: scale(-1);
+}
+
+.corner-decoration.corner-left-bottom {
+    left: 0;
+    bottom: 0;
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+}

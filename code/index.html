@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@400;600&family=Cormorant+Upright:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section id="wrapper" class="wrapper">
+        <div id="restart-container" class="restart-container">
+            <div class="guess-counter">
+                <span id="right-guesses" class="right-guesses"></span>
+                /
+                <span id="total-guesses" class="total-guesses"></span>
+            </div>
+            <button id="restartButton" class="restart-button" onclick="restart()">Restart</button>
+        </div>
+        <div id="setup-container" class="setup-container"></div>
+        <div id="quote-container" class="quote-container">
+        </div>
+        <div id="guess-container" class="guess-container"></div>
+    </section>
+    <script src="./script.js"></script>
+</body>
+
+</html>
