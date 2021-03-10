@@ -55,6 +55,7 @@ p {
 .quote-container {
     background-color: var(--dark-color);
     height: 50vh;
+    min-height: fit-content;
 }
 
 .start-button-container {
