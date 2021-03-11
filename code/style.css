@@ -11,6 +11,7 @@ body {
     background-position-x: 75%;
     font-family: 'Cormorant Unicase', serif;
     margin: 0;
+    min-height: 100vh;
 }
 p {
     margin: 0;
