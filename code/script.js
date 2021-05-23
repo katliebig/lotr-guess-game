@@ -1,4 +1,4 @@
-const bearerToken = process.env.BEARER_TOKEN
+const { BEARER_TOKEN } = process.env
 
 const restartContainer = document.querySelector("#restart-container")
 const rightGuessesContainer = document.querySelector("#right-guesses")
@@ -109,7 +109,7 @@ createSetupButtons()
 const getQuote = () => {
     secret = charactersInPlay[randomNum(charactersInPlay.length)]
     console.log(secret.name)
-    fetch(`https://the-one-api.dev/v2/character/${secret.id}/quote`, { headers: { "Authorization": `Bearer ${bearerToken}` } })
+    fetch(`https://the-one-api.dev/v2/character/${secret.id}/quote`, { headers: { "Authorization": `Bearer ${BEARER_TOKEN}` } })
         .then(response => response.json())
         .then(data => {
             const filteredQuotes = data.docs.filter((quote) => quote.dialog.length > 10)
