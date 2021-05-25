@@ -1,4 +1,4 @@
-const bearerToken = "xiBTA2j96-n4Bkl7SBY-"
+const bearerToken = "K_j-rZJXREyooJ4mT2KP"
 
 const restartContainer = document.querySelector("#restart-container")
 const rightGuessesContainer = document.querySelector("#right-guesses")
